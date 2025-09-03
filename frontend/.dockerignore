@@ -1,0 +1,16 @@
+node_modules
+dist
+/.env
+/.env.local
+/.venv
+.idea
+.vscode
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+coverage
+.DS_Store
+/.git
+/.gitignore
+package-lock.json

@@ -1,0 +1,6 @@
+[lint]
+select = ["E", "F", "W", "I"]
+ignore = []
+
+[format]
+quote-style = "single"

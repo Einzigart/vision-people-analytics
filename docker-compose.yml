@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+    # Load environment variables from backend/.env so values there take precedence
+    env_file:
+      - ./backend/.env
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend/src:/app/src
+    depends_on:
+      - backend
+    # Provide frontend/.env to the build/runtime; Vite reads VITE_ vars at build time
+    env_file:
+      - ./frontend/.env
+
+  detection-model:
+    build: ./detectionmodel
+    ports:
+      - "8080:8080" # Assuming the API in the script runs on port 8080
+    volumes:
+      - ./detectionmodel:/app
+
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=db_name
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

@@ -1,0 +1,22 @@
+Django>=5.2.5
+djangorestframework>=3.16.1
+django-cors-headers>=4.3.0
+psycopg2-binary>=2.9.9
+python-dateutil>=2.8.2
+gunicorn>=21.2.0
+whitenoise>=6.5.0
+dj-database-url>=2.1.0
+python-dotenv>=0.21.0
+requests>=2.20.0
+
+# Rate Limiting
+django-ratelimit>=4.1.0
+redis>=5.0.0
+django-redis>=5.4.0
+
+# Code Quality
+ruff>=0.1.0
+
+# Testing
+pytest>=7.0.0
+pytest-django>=4.0.0
