@@ -3,7 +3,7 @@
 A comprehensive web interface for an AI-powered people counting and demographic analysis system based on object detection algorithms with age and gender classification.
 
 ## Project Overview
-
+![alt text](image.png)
 This project provides a complete solution for real-time people counting and demographic analysis using computer vision. The system integrates various object detection models with a modern web interface to visualize real-time and historical data, providing insights on people count and demographic distribution.
 
 ### Key Value Proposition
