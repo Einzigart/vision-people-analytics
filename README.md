@@ -454,18 +454,6 @@ python manage.py flush
 python manage.py run_aggregation
 ```
 
-## License
-
-MIT License - see LICENSE file for details
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
 ## Documentation
 
 Comprehensive documentation is available in the [docs](docs/) directory:
