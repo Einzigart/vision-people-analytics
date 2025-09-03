@@ -1,4 +1,4 @@
-# Visitor Counter Web Interface
+# Visitor Counter Web Interface with Computer Vision
 
 A comprehensive web interface for an AI-powered people counting and demographic analysis system based on object detection algorithms with age and gender classification.
 
@@ -51,10 +51,16 @@ Before you begin, ensure you have the following installed:
    pnpm run dev
    ```
 
-4. **Run the detection model:**
+4. **Set up and run the detection model:**
    ```bash
    cd detectionmodel
-   python dummytestscript.py
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   # For live detection with computer vision models, ensure you have PyTorch and OpenCV installed:
+   # pip install torch torchvision opencv-python
+   python dummytestscript.py  # For testing with dummy data
+   # Or run live detection: python live_detection_with_api.py --api-url http://localhost:8000/api
    ```
 
 5. **Access the application:**
