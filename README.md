@@ -400,7 +400,7 @@ else:
     print(f"Error: {response.status_code} - {response.text}")
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Core Data Endpoints
 - **`GET /api/`** - API overview and documentation
@@ -471,7 +471,7 @@ Comprehensive documentation is available in the [docs](docs/) directory:
 
 See the [Documentation Index](docs/README.md) for a complete overview of all available documentation.
 
-## 📝 License
+## License
 
 MIT License - see LICENSE file for details
 
